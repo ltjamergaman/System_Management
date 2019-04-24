@@ -1,0 +1,99 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(SM_HelpDlg) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   enabled = "1";
+   visible = "1";
+   clipToParent = "1";
+
+   new GuiWindowCtrl() {
+      profile = "GuiWindowProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "164 70";
+      extent = "337 249";
+      minExtent = "8 2";
+      enabled = "1";
+      visible = "1";
+      clipToParent = "1";
+      text = "System Management Server Add-on by Lt. Jamergaman";
+      maxLength = "255";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "0";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      minSize = "50 50";
+
+      new GuiMLTextCtrl() {
+         profile = "GuiMLTextProfile";
+         horizSizing = "center";
+         vertSizing = "bottom";
+         position = "62 37";
+         extent = "212 114";
+         minExtent = "8 2";
+         enabled = "1";
+         visible = "1";
+         clipToParent = "1";
+         lineSpacing = "2";
+         allowColorChars = "0";
+         maxChars = "-1";
+         text = "<just:center><font:impact:22>Version 1.6 Build 0626-5<br><br><br><font:arial bold:16>This is the first time loading this version of System Management!<br>Do you want to see what\'s new?";
+         maxBitmapHeight = "-1";
+         selectable = "0";
+         autoResize = "1";
+      };
+      new GuiBitmapButtonCtrl() {
+         profile = "BlockButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "16 202";
+         extent = "140 30";
+         minExtent = "8 2";
+         enabled = "1";
+         visible = "1";
+         clipToParent = "1";
+         command = "canvas.popDialog(SM_HelpDlg);";
+         accelerator = "escape";
+         text = "No";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         bitmap = "base/client/ui/button1";
+         lockAspectRatio = "0";
+         alignLeft = "0";
+         alignTop = "0";
+         overflowImage = "0";
+         mKeepCached = "0";
+         mColor = "255 255 255 255";
+      };
+      new GuiBitmapButtonCtrl() {
+         profile = "BlockButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "180 202";
+         extent = "140 30";
+         minExtent = "8 2";
+         enabled = "1";
+         visible = "1";
+         clipToParent = "1";
+         command = "canvas.popdialog(SM_HelpDlg);SMC_showChangeLogs();";
+         accelerator = "enter";
+         text = "Yes";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         bitmap = "base/client/ui/button1";
+         lockAspectRatio = "0";
+         alignLeft = "0";
+         alignTop = "0";
+         overflowImage = "0";
+         mKeepCached = "0";
+         mColor = "255 255 255 255";
+      };
+   };
+};
+//--- OBJECT WRITE END ---

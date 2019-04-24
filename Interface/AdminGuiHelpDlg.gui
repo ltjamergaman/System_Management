@@ -1,0 +1,107 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(AdminGuiHelpDlg) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "1024 768";
+   minExtent = "8 2";
+   enabled = "1";
+   visible = "1";
+   clipToParent = "1";
+
+   new GuiWindowCtrl() {
+      profile = "GuiWindowProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "389 219";
+      extent = "312 200";
+      minExtent = "8 2";
+      enabled = "1";
+      visible = "1";
+      clipToParent = "1";
+      text = "Admin Gui++ Help Info";
+      maxLength = "255";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      minSize = "50 50";
+
+      new GuiSwatchCtrl() {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "3 25";
+         extent = "178 172";
+         minExtent = "8 2";
+         enabled = "1";
+         visible = "1";
+         clipToParent = "1";
+         color = "125 125 125 255";
+
+         new GuiMLTextCtrl(AdminGuiHelpDlg_text) {
+            profile = "GuiMLTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "0 0";
+            extent = "177 96";
+            minExtent = "8 2";
+            enabled = "1";
+            visible = "1";
+            clipToParent = "1";
+            lineSpacing = "2";
+            allowColorChars = "1";
+            maxChars = "-1";
+            text = "<just:center><font:impact:16>This is the Admin Gui++ Help Interface.<br>First off, this server add-on helps with a lot of needed-key-features in the game, especially since a lot of servers could use these features.";
+            maxBitmapHeight = "-1";
+            selectable = "1";
+            autoResize = "1";
+         };
+         new GuiBitmapButtonCtrl() {
+            profile = "BlockButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "19 132";
+            extent = "140 30";
+            minExtent = "8 2";
+            enabled = "1";
+            visible = "1";
+            clipToParent = "1";
+            command = "AdminGuiHelpDlg::Next();";
+            text = "Next >>";
+            groupNum = "-1";
+            buttonType = "PushButton";
+            bitmap = "base/client/ui/ci/button1";
+            lockAspectRatio = "0";
+            alignLeft = "0";
+            alignTop = "0";
+            overflowImage = "0";
+            mKeepCached = "0";
+            mColor = "255 255 255 255";
+         };
+      };
+      new GuiBitmapCtrl(AdminGuiHelpDlg_bitmap) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "181 25";
+         extent = "128 172";
+         minExtent = "8 2";
+         enabled = "1";
+         visible = "1";
+         clipToParent = "1";
+         wrap = "0";
+         lockAspectRatio = "0";
+         alignLeft = "0";
+         alignTop = "0";
+         overflowImage = "0";
+         keepCached = "0";
+         mColor = "255 255 255 255";
+         mMultiply = "0";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
